@@ -55,7 +55,7 @@ fermataOverBarLower = {
   \textEndMark \markup { \musicglyph "scripts.dfermata" }
 }
 
-semprePiuP = \makeSpanner \markup { \large \italic "sempre più" \dynamic p }
+semprePiuP = \makeSpanner \markup { \large \italic "sempre più" \dynamic p " " }
 perdendosi = \makeSpanner \markup \large \italic perdendosi
 
 clefInvisible = 

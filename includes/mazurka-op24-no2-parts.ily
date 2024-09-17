@@ -5,9 +5,6 @@
 
 \include "global-variables.ily"
 
-% Supress cyclic dependency warnings six times
-% #(ly:expect-warning-times 6 "cyclic dependency: calculation-in-progress")
-
 %%% Positions and shapes %%%
 
 slurShapeA = \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . -1)) \etc
@@ -97,14 +94,12 @@ rightHandUpper = \relative {
   g8 a g f e d) |
   \tuplet 3/2 { c8( d c } g4-.) g8(^\rit b |
   a2 f4) |
-  % like 5
   c8(^\aTempo c' \tuplet 3/2 { b c b } a f |
   d8-. d-. \acciaccatura { e } d4-.) c-> |
   a8( a' \tuplet 3/2 { g a g } f d |
   b-. b-. \acciaccatura { c } b4-.) a-> |
   
   \barNumberCheck 41
-  % like 9
   c8( c') \slashedGrace { b } b4(\trill a8 f |
   d8-. d-. \acciaccatura { e } d4-.) c-> |
   a8( a') \slashedGrace { g } g4(\trill f8 d |
@@ -116,7 +111,6 @@ rightHandUpper = \relative {
   \oneVoice <e, c'>4) q-. \voiceOne q->( |
   
   \barNumberCheck 49
-  % like 17
   b'4) b8( c d4) |
   b8( c b c d4) |
   f8( e d4) g,8-\slurShapeA ( e' |
@@ -139,7 +133,6 @@ rightHandUpper = \relative {
   af8 c ef4) af->-\slurShapeI ( |
   
   \barNumberCheck 65
-  % like 57
   <c,, gf'>4) q-. \appoggiatura { gf'16 af } <c, gf'>4-> |
   f8( af df4) f-\slurShapeF ( |
   ef8 df bf4-. gf-.) |
@@ -154,14 +147,12 @@ rightHandUpper = \relative {
   q4 q q) |
   <af d>( <bf d> <cf d> |
   <bf ef> <gf ef'> <bf ef>) |
-  % like 73
   <af ef'>4( q q |
   q4 q q) |
   <af d>( <bf d> <cf d> |
   <bf ef> <gf ef'> <bf ef>) |
   
   \barNumberCheck 81
-  % like 77
   <af ef'>4( q q |
   q4 q q) |
   <af d>( <bf d> <cf d> |
@@ -174,20 +165,17 @@ rightHandUpper = \relative {
   
   \barNumberCheck 89
   \key c \major 
-  % like 37
   c8(^\aTempo c' \tuplet 3/2 { b c b } a f |
   % acciaccatura in SrcB
   d8-. d-. \acciaccatura { e } d4-.) c-> |
   a8( a' \tuplet 3/2 { g a g } f d |
   b-. b-. \acciaccatura { c } b4-.) a-> |
-  % like 41
   c8( c') \slashedGrace { b } b4(\trill a8 f |
   d8-. d-. \acciaccatura { e } d4-.) c-> |
   a8( a') \slashedGrace { g } g4(\trill f8 d |
   b8-. b-. \acciaccatura { c } b4-.) \voiceOne a->-\slurShapeO ( |
   
   \barNumberCheck 97
-  % like 45
   % SrcA and SrcB differ greatly iin the next eight bars.  I have decided
   % to follow SrcB as it is a variation of the theme.
   b4) b8( c d4) |
@@ -245,7 +233,6 @@ rightHandLower = \relative {
   
   \barNumberCheck 41
   s2. * 4 |
-  % like 13
   g4 g f-> |
   g4 g f-> |
   f4 f f-> |
@@ -273,7 +260,6 @@ rightHandLower = \relative {
   s2. * 8 |
   
   \barNumberCheck 97
-  % like 45
   g4 g f-> |
   g4 g f-> |
   f4 f f-> |
@@ -288,8 +274,6 @@ rightHandLower = \relative {
 
 rightHand = {
   \global
-  % \mergeDifferentlyDottedOn
-  % \mergeDifferentlyHeadedOn
   <<
     \new Voice \rightHandUpper
     \new Voice \rightHandLower
@@ -344,7 +328,6 @@ leftHand = \relative {
   b,4-. <g' d' f> q |
   c,4-. <g' c e> q |
   f4-. <a c f> q |
-  % like 9
   % second beat, top note, f in SrcB
   <a c e>4 <a c f> q |
   <b f'>4 q <c e> |
@@ -352,12 +335,10 @@ leftHand = \relative {
   <e d'>4 q <a c> |
   
   \barNumberCheck 41
-  % like 9
   <a c e>4 <a c f> q |
   <b f'>4 q <c e> |
   <d f>4 <f, a d> q |
   <e d'>4 q <a c> |
-  % like 13
   <g d'>4 q <d a' d> |
   <g d'>4 q <d a' d> |
   q4 q <g b>( |
@@ -406,7 +387,6 @@ leftHand = \relative {
   gf8 f ef4) gf( |
   
   \barNumberCheck 81
-  % like 73, octave down
   f2\> cf4)\! |
   f2(\> cf4)\! |
   f8-\slurShapeL ( cf bf4 af |
@@ -418,20 +398,17 @@ leftHand = \relative {
   
   \barNumberCheck 89
   \key c \major 
-  % like 37
   % second beat, top note, f in SrcB
   <a c e>4 <a c f> q |
   <b f'>4 q <c e> |
   <d f>4 <f, a d> q |
   <e d'>4 q <a c> |
-  % like 41
   <a c e>4 <a c f> q |
   <b f'>4 q <c e> |
   <d f>4 <f, a d> q |
   <e d'>4 q <a c> |
   
   \barNumberCheck 97
-  % like 45
   <g d'>4 q <d a' d> |
   <g d'>4 q <d a' d> |
   q4 q <g b> |

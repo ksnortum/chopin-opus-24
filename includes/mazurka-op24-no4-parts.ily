@@ -28,6 +28,10 @@ slurShapeJ = \shape #'(
                         ) \etc
 slurShapeK = \shape #'((0 . -0.5) (0 . 0) (0 . 0) (0 . 0)) \etc
 slurShapeL = \shape #'((0 . 0) (0 . 1.5) (0 . 2) (0 . 0)) \etc
+slurShapeM = \shape #'((0 . 2) (0 . 2) (0 . 2) (0 . 2)) \etc
+
+moveNotesA = \once \override Score.NoteColumn.X-offset = -0.4
+moveAccentA = \offset Y-offset -0.5 \etc
 
 %%% Music %%%
 
@@ -105,10 +109,10 @@ rightHandUpper = \relative {
     e8. f16 f4-.) \oneVoice <f f'>(\ff |
     <af! af'!>8. <gf gf'>16 q4-.) a,4( |
     \alternative {
-      \volta 1 {
+      {
         bf2.)-\slurShapeC \laissezVibrer |
       }
-      \volta 2 {
+      {
         bf2\repeatTie f'4~ |
       }
     }
@@ -119,14 +123,14 @@ rightHandUpper = \relative {
     e8 c bf4 bf |
     f'8 af gf4 gf8 df |
     e8 c bf2)~ |
-    <bf, e bf'>4->^( <a f' a>) q-\slurShapeD ^( |
+    <bf, e bf'>4->-\slurShapeM ^( <a f' a>) q-\slurShapeD ^( |
     <e' c'>8 <bf bf'> <a f' a>4 q) |
-    <bf e bf'>4^( <a f' a>) q-\slurShapeF ^( |
+    <bf e bf'>4-\slurShapeM ^( <a f' a>) q-\slurShapeF ^( |
     \alternative {
-      \volta 1 {
+      {
         \voiceOne a'8-> g f2) |
       }
-      \volta 2 {
+      {
         a8->( g f4) \oneVoice f->~^\conAmina |
       }
     }
@@ -163,7 +167,6 @@ rightHandUpper = \relative {
   ff8-.) r df4-> r4 |
   
   \barNumberCheck 87
-  % like 71
   \slashedGrace { gs8 } \tuplet 3/2 { gs(^\conForza a gs } fs gs a b |
   ds8-.) r cs2->_( |
   b,8[-.) r16 a']( \slashedGrace { a8 } \tuplet 3/2 { a b a } gs fs |
@@ -186,19 +189,16 @@ rightHandUpper = \relative {
     ef,8..) df'32]~ |
   
   \barNumberCheck 101
-  % like 37
   \voiceOne df4.(^\aTempo a8 df a |
   a8. bf16 bf4-.) bf-> |
   f'4.( c8 f c |
   c8. df16 df4-.) df-> |
-  % like 41
   af'4.( e8 af e |
-  e8. f16 f4-.) \oneVoice <f f'>->~-\slurShapeI (\ff |
+  e8. f16 f4-.) \oneVoice <f f'>->~-\slurShapeI ( |
   q8. <gf gf'>16 q4-.) a,4-> |
   c4.->( bf8) \tuplet 3/2 { bf->( af! gf) } |
   
   \barNumberCheck 109
-  % like 45
   \voiceOne df'4.(^\piuAgitatoEStretto a8 df a |
   a8. bf16 bf4-.) \tuplet 3/2 { bf8( c bf) } |
   f'4.( c8 f c |
@@ -219,7 +219,6 @@ rightHandUpper = \relative {
   \acciaccatura { f8 } ef df df2->) |
   
   \barNumberCheck 125
-  % like 117
   bf'8.( c16 c4-.) c-> |
   c8( df) df2->~ |
   df8.( c16 c4.-> bf8 |
@@ -247,7 +246,7 @@ rightHandUpper = \relative {
   f2.~ |
   f2.^\smorzando |
   c'8( bf bf4. gf8 |
-  \acciaccatura { af8 } gf-> f f2->)\fermata | 
+  \acciaccatura { af8 } gf-\moveAccentA -> f f2->)\fermata | 
   \bar "|."
 }
 
@@ -309,22 +308,18 @@ rightHandLower = \relative {
     bf8.-> a16 a4 s |
     s2. |
     \alternative {
-      \volta 1 {
-        s2. |
-      }
-      \volta 2 {
-        s2. |
-      }
+      { s2. | }
+      { s2. | }
     }
   }
   \repeat volta 2 { 
     \barNumberCheck 54
     s2. * 7 |
     \alternative {
-      \volta 1 {
+      {
         <bf, e>4 a2 |
       }
-      \volta 2 {
+      {
         <bf e>4 a s |
       }
     }
@@ -349,18 +344,15 @@ rightHandLower = \relative {
   s2 \hideNoteHead ef,4~ |
   
   \barNumberCheck 101
-  % like 37
   ef4.-> gf8 f! ef |
   ef8.-> df16 df4 g |
   af!4. bff8 af gf! |
   gf8.-> f16 f4 b |
-  % like 41
   c4. df8 c bf! |
   bf8. a16 a4 s |
   s2. * 2 |
   
   \barNumberCheck 109
-  %like 45
   f8 \slurUp \acciaccatura { af } gf f gf f ef |
   ef8.-> df16 df4 g-> |
   af!8 \acciaccatura { cf } bff af bff af gf! |
@@ -415,24 +407,16 @@ leftHandUpper = \relative {
     r4 <c f> s |
     s2 . |
     \alternative {
-      \volta 1 {
-        s2. |
-      }
-      \volta 2 {
-        s2. |
-      }
+      { s2. | }
+      { s2. | }
     }
   }
   \repeat volta 2 { 
     \barNumberCheck 54
     s2. * 7 |
     \alternative {
-      \volta 1 {
-        s2. |
-      }
-      \volta 2 {
-        s2. |
-      }
+      { s2. | }
+      { s2. | }
     }
   }
   
@@ -457,9 +441,8 @@ leftHandUpper = \relative {
   s2. * 2 |
   
   \barNumberCheck 109
-  % like 45
   s2. * 5 |
-  r4 <c f> s |
+  r4 \moveNotesA <c f> s |
   s2. * 2 |
   
   \barNumberCheck 117
@@ -535,10 +518,10 @@ leftHandLower = \relative {
     \clef bass \voiceTwo f,2 \oneVoice <f c' a'>4\arpeggio |
     f,4-. \clef treble <c'' ef a c>-> \clef bass <f, c' ef> |
     \alternative {
-      \volta 1 {
+      {
         bf,4 <f' df'> <ef gf df'>-> |
       }
-      \volta 2 {
+      {
         bf4 <f' df'> f'~ |
       }
     }
@@ -553,10 +536,10 @@ leftHandLower = \relative {
     <c g' c>4 <c f c'> q |
     <c g' c>4 <c f c'> q |
     \alternative {
-      \volta 1 {
+      {
         <c g' c>4 <f c'>2 |
       }
-      \volta 2 {
+      {
         <c g' c>4 <f c'> r |
       }
     }
@@ -593,7 +576,6 @@ leftHandLower = \relative {
   df,4-. <ff' af> q |
   
   \barNumberCheck 87
-  % like 71
   a,4-. <fs' cs' e> q |
   a,4-. <fs' cs' e> q |
   b,4-. <fs' a ds> q |
@@ -610,19 +592,16 @@ leftHandLower = \relative {
   R2. * 3 |
   
   \barNumberCheck 101
-  % like 37
   f,4-. <f' c'> q |
   bf,4-. <f' bf> <ef df'> |
   af,4-. <af' gf'!> q |
   df,4-. <af' df> <g f'> |
-  % like 41
   c,4-. \clef treble <c' bf'!> q |
   \voiceTwo f,2.*2/3( \hideNoteHead c'4) |
   \clef bass \oneVoice f,,4-. \clef treble <c'' ef a> <ef c'> |
   \clef bass bf,4-. <f' df'> q |
   
   \barNumberCheck 109
-  % like 45
   bf,4-. <f' c' ef> q |
   bf,4-. <f' bf> <ef df'> |
   af,4-. <af' c gf'!> q |
@@ -643,7 +622,6 @@ leftHandLower = \relative {
   \voiceTwo bf,2. |
   
   \barNumberCheck 125
-  % like 117
   \oneVoice bf4-. <gf' bf ef> q |
   bf,4-. <g' bf e> q |
   bf,4-. <g' c e> q |
@@ -738,10 +716,10 @@ dynamics = {
     s4 s2\! |
     s2 s4\parenthesize\p |
     \alternative {
-      \volta 1 {
+      {
         s2. |
       }
-      \volta 2 {
+      {
         s2 s4\p |
       }
     }
@@ -751,10 +729,10 @@ dynamics = {
     s2.^\sottoVoce |
     s2. * 6 |
     \alternative {
-      \volta 1 {
+      {
         s2.
       }
-      \volta 2 {
+      {
         s2 s4\f |
       }
     }
@@ -798,12 +776,11 @@ dynamics = {
   s2. * 2 |
   s2.\cresc |
   s2. * 2 |
-  s4 s2\! |
+  s4 s\! s\ff |
   s2 s4\p |
   s2. |
   
   \barNumberCheck 109
-  % like 45
   s2. * 2 |
   s2.\cresc |
   s2. * 2 |
@@ -864,24 +841,16 @@ tempi = {
     \barNumberCheck 49
     s2. * 3 |
     \alternative {
-      \volta 1 {
-        s2. |
-      }
-      \volta 2 {
-        s2. |
-      }
+      { s2. | }
+      { s2. | }
     }
   }
   \repeat volta 2 {
     \barNumberCheck 54
     s2. * 7 |
     \alternative {
-      \volta 1 {
-        s2. |
-      }
-      \volta 2 {
-        s2. |
-      }
+      { s2. | }
+      { s2. | }
     }
   }
   
@@ -997,10 +966,10 @@ pedal = {
     s2. |
     s2\sd s8 s\su |
     \alternative {
-      \volta 1 {
+      {
         s2\sd s8 s\su |
       }
-      \volta 2 {
+      {
         s2\sd s8 s\su |
       }
     }
@@ -1009,12 +978,8 @@ pedal = {
     \barNumberCheck 54
     s2. * 7 |
     \alternative {
-      \volta 1 {
-        s2. |
-      }
-      \volta 2 {
-        s2. |
-      }
+      { s2. | }
+      { s2. | }
     }
   }
   
@@ -1066,7 +1031,6 @@ pedal = {
   s2. * 2 |
   
   \barNumberCheck 101
-  % like 37
   s2\sd s8 s\su |
   s2. |
   s2\sd s8 s\su |
@@ -1077,7 +1041,6 @@ pedal = {
   s2\sd s8 s\su |
   
   \barNumberCheck 109
-  % like 45
   s2\sd s8 s\su |
   s2\sd s4\su |
   s2\sd s8 s\su |

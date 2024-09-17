@@ -49,7 +49,6 @@ rightHandUpper = \relative {
     \acciaccatura { fs8 } d2->) a'4->~( |
     
     \barNumberCheck 9
-    % like 1
     a8 fs d4) \voiceOne bf'8.( a16 |
     \oneVoice g2-> a8 bf |
     c8[ r16 d] ef4) fs->-\slurShapeB ( |
@@ -70,7 +69,6 @@ rightHandUpper = \relative {
     \tuplet 3/2 { c8( d c } bf4-.) a8->( g |
     
     \barNumberCheck 25
-    % like 17
     f4-.) \tuplet 3/2 { g8->( a g } f4-.) |
     \tuplet 3/2 { g8->( a g } f4-.) g'4-> |
     \tuplet 3/2 { f8( g f } e4.-> ef8) |
@@ -79,14 +77,14 @@ rightHandUpper = \relative {
     \tuplet 3/2 { g8->( a g } f4-.) ef'-> |
     \tuplet 3/2 { d8( ef d) } cs4.->( c8) |
     \alternative {
-      \volta 1 {
+      {
         \tuplet 3/2 { c8( d c) } b4.->( bf8) |
       }
-      \volta 2 {
+      {
         \tuplet 3/2 { c8( d c } bf4.) b8-\slurShapeI ( |
       }
     }
-  } % repeat volta
+  }
   
   \barNumberCheck 34
   \key ef \major 
@@ -113,7 +111,6 @@ rightHandUpper = \relative {
   
   \barNumberCheck 50
   \key bf \major 
-  % like 1
   a8[)^\aTempo r16 fs]( d!4 fs) |
   g2->( \oneVoice a8 bf |
   c8[r16 d] ef4) fs->-\slurShapeA ( |
@@ -145,7 +142,6 @@ rightHandLower = \relative {
     s2. * 2 |
     
     \barNumberCheck 9
-    % like 1
     s2 \voiceFour fs4 |
     s2. * 2 |
     bf2.( |
@@ -159,14 +155,10 @@ rightHandLower = \relative {
     \barNumberCheck 25
     s2. * 7 |
     \alternative {
-      \volta 1 {
-        s2. |
-      }
-      \volta 2 {
-        s2. |
-      }
+      { s2. | }
+      { s2. | }
     }
-  } % repeat volta
+  }
   
   \barNumberCheck 34
   s2. * 4 |
@@ -183,7 +175,6 @@ rightHandLower = \relative {
   
   \barNumberCheck 50
   \key bf \major
-  % like 1
   c!4( c c |
   bf4) s2 |
   s2. |
@@ -226,7 +217,6 @@ leftHand = \relative {
     r4 <d a'>-.( q-.) |
     
     \barNumberCheck 9
-    % like 1
     d,4-. <d' a' c!> <d a' c d> |
     g,4-. <g' bf d> q |
     r4 \clef treble <g c ef g>( <g c ef a>) |
@@ -247,7 +237,6 @@ leftHand = \relative {
     bf,4-. <f' bf d> q |
     
     \barNumberCheck 25
-    % like 17
     f,4-.( <f' bf ef> <f a ef'> |
     <f bf ef>4 <f a ef'> q) |
     f,4-. <c'' ef! a> q |
@@ -256,14 +245,14 @@ leftHand = \relative {
     <f bf ef>4 <f a ef'>) <f a g'>(\> |
     <f a f'>4 <f a e'> <f a ef'>)\! |
     \alternative {
-      \volta 1 {
+      {
         bf,4-. <fs' d'>( <g d'>) |
       }
-      \volta 2 {
+      {
         bf,4-. <f' d'> q |
       }
     }
-  } % repeat volta
+  }
   
   \barNumberCheck 34
   \key ef \major
@@ -278,7 +267,6 @@ leftHand = \relative {
   ef,4-. <g' bf> q |
   
   \barNumberCheck 42
-  % like 34
   bf,4-. <f' bf d> q |
   ef,4-. <g' bf> <g bf ef> |
   bf,4-. <f' bf d> q |
@@ -290,7 +278,6 @@ leftHand = \relative {
   
   \barNumberCheck 50
   \key bf \major 
-  % like 1
   d,4-. <d' a'> q |
   g,4-. <g' bf d> q |
   r4 \clef treble <g c ef g>( <g c ef a>) |
@@ -331,20 +318,15 @@ dynamics = {
     s2. * 3 |
     
     \barNumberCheck 25
-    % like 17
     s2.\sf |
     s2. * 3 |
     s2.\sf |
     s2. * 2 |
     \alternative {
-      \volta 1 {
-        s2. |
-      }
-      \volta 2 {
-        s2. |
-      }
+      { s2. | }
+      { s2. | }
     }
-  } % repeat volta
+  }
   
   \barNumberCheck 34
   \tag layout { s2. } \tag midi { s2.\mf } |
@@ -398,14 +380,10 @@ tempi = {
     \barNumberCheck 25
     s2. * 7 |
     \alternative {
-      \volta 1 {
-        s2. |
-      }
-      \volta 2 {
-        s2. |
-      }
+      { s2. | }
+      { s2. | }
     }
-  } % repeat volta
+  }
   
   \barNumberCheck 34
   \tempo 4 = 120
@@ -442,7 +420,6 @@ pedal = {
     s2. * 2 |
     
     \barNumberCheck 9
-    % like 1
     s2-\tweak Y-offset -1 \sd s8 s\su |
     s2\sd s8 s\su |
     s2. * 2 |
@@ -460,7 +437,6 @@ pedal = {
     s2\sd s8 s\su |
     
     \barNumberCheck 25
-    % like 17
     s2-\tweak Y-offset -1 \sd s4\su |
     s2. |
     s2-\tweak Y-offset -1 \sd s8 s\su |
@@ -468,14 +444,14 @@ pedal = {
     s2-\tweak Y-offset -1 \sd s4\su |
     s2. * 2 |
     \alternative {
-      \volta 1 {
+      {
         s4\sd s2\su |
       }
-      \volta 2 {
+      {
         s2\sd s4\su |
       }
     }
-  } % repeat volta
+  }
   
   \barNumberCheck 34
   s2-\tweak Y-offset -1.5 \sd s8 s\su |
@@ -486,7 +462,6 @@ pedal = {
   s2-\tweak Y-offset -0.75 \sd s8 s\su |
   
   \barNumberCheck 42
-  % like 17
   s2\sd s8 s\su |
   s2-\tweak Y-offset -0.75 \sd s8 s\su |
   s2\sd s8 s\su |

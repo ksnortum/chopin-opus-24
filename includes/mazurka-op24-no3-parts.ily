@@ -96,10 +96,10 @@ rightHand = \relative {
     ef8[-.) r16 c'] \moveDynamicA c'4\sf\fermata \tuplet 3/2 { bf8( af f) } |
     g8( f ef df bf f) |
     \alternative {
-      \volta 1 {
+      {
         ef8[ r16 c']( af4) c\laissezVibrer | 
       }
-      \volta 2 {
+      {
         ef,8-. c'-\slurShapeA ( c' bf af f |
       }
     }
@@ -153,10 +153,10 @@ leftHandUpper = \relative {
     s4 <af c>2 |
     s2. * 3 |
     \alternative {
-      \volta 1 {
+      {
         r4 <ef c'> s4 |
       }
-      \volta 2 {
+      {
         s2. |
       }
     }
@@ -222,11 +222,11 @@ leftHandLower = \relative {
     ef,4-. <ef' c' af'>\arpeggio\fermata r |
     ef,4-. <ef' g df'> q |
     \alternative {
-      \volta 1 {
+      {
         \voiceTwo af,2*1/2( \hideNoteHead ef'4) \clef treble \oneVoice 
           <c' af'>4\laissezVibrer \clefInvisible |
       }
-      \volta 2 {
+      {
         \clef bass af,4 <ef' c'> q |
       }
     }
@@ -301,11 +301,11 @@ dynamics = {
     s2 s4^\dolce |
     s2\> s8 s\! |
     \alternative {
-      \volta 1 {
+      {
         s2. |
       }
-      \volta 2 {
-        s2.^\dolcissimo
+      {
+        s2.^\dolcissimo |
       }
     }
   }
@@ -352,12 +352,8 @@ tempi = {
     s4 \tempo 4 = 60 s \tempo 4 = 126 s |
     s2. |
     \alternative {
-      \volta 1 {
-        s2. |
-      }
-      \volta 2 {
-        s2. |
-      }
+      { s2. | }
+      { s2. | }
     }
   }
   
@@ -422,10 +418,10 @@ pedal = {
     s2\sd s8 s\su |
     s2\sd s8 s\su |
     \alternative {
-      \volta 1 {
+      {
         s2\sd s4\su |
       }
-      \volta 2 {
+      {
         s2\sd s8 s\su |
       }
     }
