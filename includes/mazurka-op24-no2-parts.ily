@@ -104,7 +104,6 @@ rightHandUpper = \relative {
   d8-. d-. \acciaccatura { e } d4-.) c-> |
   a8( a') \slashedGrace { g } g4(\trill f8 d |
   b8-. b-. \acciaccatura { c } b4-.) \voiceOne a->( |
-  % like 13
   b4) b8( c d4 |
   b4-.) b8( c d4) |
   f8( e d4) g,8-\slurShapeA ( e' |
@@ -367,7 +366,6 @@ leftHand = \relative {
   
   \barNumberCheck 65
   <af, ef' af>4 q q |
-  % like 58
   df,4-. <f' af df> q |
   gf,4-. <gf' bf df> q |
   df,4-. <f' af df> q |
